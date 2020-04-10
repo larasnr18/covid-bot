@@ -61,7 +61,11 @@ $data = json_decode($body, true);
                 if($event['message']['type'] == 'text')
                 {
                     // send same message as reply to user
-                    $result = $bot->replyText($event['replyToken'], $event['message']['text']);
+                    
+                    if($event['message']['text']=='info covid'){
+                      $message='ini info';
+                      $result = $bot->replyText($event['replyToken'], $message);
+                    }
  
  
                     // or we can use replyMessage() instead to send reply message
