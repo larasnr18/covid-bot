@@ -109,8 +109,16 @@ $data = json_decode($body, true);
 
                         $natRecovered = $result[0]->sembuh;
 
-                        $datetimeString = $result[1]->Last_Update;
-                        $Last_Update = strtotime($datetimeString);
+                        $url2 = "https://api.kawalcorona.com/";
+
+                        $client2 = curl_init($url2);
+                        curl_setopt($client2,CURLOPT_RETURNTRANSFER,true);
+                        $response2 = curl_exec($client2);
+                        $result2 = json_decode($response2);
+
+
+                        $datetimeString = $result2[1]->Last_Update;
+                        $Last_Update = date("l d F Y, H:i:s", strtotime($datetimeString));
 
                         // $intConfirmed = getData("https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Confirmed%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true");
 
