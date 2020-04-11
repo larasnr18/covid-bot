@@ -49,6 +49,11 @@
             "type": "text",
             "text": "Kabar Covid-19 terkini di Indonesia",
             "gravity": "center",
+            "action": {
+              "type": "message",
+              "label": "A",
+              "text": "Kabar Covid-19 terkini di Indonesia"
+            },
             "wrap": true
           }
         ]
@@ -145,10 +150,11 @@
             "action": {
               "type": "message",
               "label": "E",
-              "text": "Bagaimana cara melindungi orang lain? "
+              "text": "Bagaimana cara melindungi orang lain?"
             },
             "flex": 0,
             "color": "#102569",
+            "height": "sm",
             "style": "primary"
           },
           {
