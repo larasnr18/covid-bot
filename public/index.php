@@ -67,9 +67,8 @@ $data = json_decode($body, true);
                     // send same message as reply to user
                     
                     if($textMsg=='halo'){
-                      $message="Halo! Selamat datang di Pusat Informasi Covid-19 powered by Kemkominfo RI. Semoga kamu sehat-sehat selalu.";
-                      $message .= "
-                      Bagikan info akurat tentang COVID-19 ke teman dan keluargamu 🙏
+                      $message='Halo! Selamat datang di Pusat Informasi Covid-19 powered by Kemkominfo RI. Semoga kamu sehat-sehat selalu.';
+                      $message .= 'Bagikan info akurat tentang COVID-19 ke teman dan keluargamu 🙏
                       https://www.covid19.go.id
                       0811 333 99 000
                       
@@ -80,7 +79,7 @@ $data = json_decode($body, true);
                       #LawanBersamaCovid19
                       #DiRumahAja
                       #JagaJarak
-                      #MaskerUntukSemua";
+                      #MaskerUntukSemua';
                       $result = $bot->replyText($event['replyToken'], $message);
                     }else if($textMsg=='menu'){
                         $flexTemplate = file_get_contents("../vendor/menu.json");
@@ -110,34 +109,34 @@ $data = json_decode($body, true);
 
                         $natRecovered = $result[0]->sembuh;
 
-                        $datetimeString = $result[1]->lastupdate;
+                        $datetimeString = $result[1]->Last_Update;
                         $Last_Update = date("l d F Y, H:i:s", strtotime($datetimeString));
 
-                        // $intConfirmed = getData("https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Confirmed%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true");
+                        $intConfirmed = getData("https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Confirmed%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true");
 
-                        // $intDeaths = getData("https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Deaths%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true");
+                        $intDeaths = getData("https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Deaths%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true");
 
-                        // $intRecovered = getData("https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Recovered%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true");
+                        $intRecovered = getData("https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Recovered%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true");
 
-                        // $interConfirmed = $intConfirmed->features[0]->attributes->value;
-                        // $interDeaths = $intDeaths->features[0]->attributes->value;
-                        // $interRecovered = $intRecovered->features[0]->attributes->value;
+                        $interConfirmed = $intConfirmed->features[0]->attributes->value;
+                        $interDeaths = $intDeaths->features[0]->attributes->value;
+                        $interRecovered = $intRecovered->features[0]->attributes->value;
 
 
-                        // function getData($url){
+                        function getData($url2){
 
-                        //     $client = curl_init($url);
-                        //     curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
-                        //     $response = curl_exec($client);
+                            $client = curl_init($url2);
+                            curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
+                            $response = curl_exec($client);
                         
-                        //     return json_decode($response);
-                        // };
+                            return json_decode($response);
+                        };
 
                         $message="Situasi virus corona (COVID-19) ".$Last_Update;
-                        // $message.="Global";
-                        // $message.="Kasus Terkonfirmasi: ".$interConfirmed;
-                        // $message.="Sembuh: ".$interRecovered;
-                        // $message.="Kematian: ".$intDeaths;
+                        $message.="Global";
+                        $message.="Kasus Terkonfirmasi: ".$interConfirmed;
+                        $message.="Sembuh: ".$interRecovered;
+                        $message.="Kematian: ".$intDeaths;
                         $message.="\nNasional";
                         $message.="Kasus Terkonfirmasi: ".$natConfirmed;
                         $message.="Sembuh: ".$natRecovered;
