@@ -92,7 +92,7 @@ $data = json_decode($body, true);
                       #MaskerUntukSemua";
                       $result = $bot->replyText($event['replyToken'], $message);
                     }else if($textMsg=='menu'){
-                        $flexTemplate = file_get_contents("menu.json");
+                        $flexTemplate = file_get_contents("../vendor/menu.json");
                         $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
                             'replyToken' => $event['replyToken'],
                             'messages'   => [
