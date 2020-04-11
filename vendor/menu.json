@@ -83,6 +83,11 @@
             "flex": 10,
             "align": "start",
             "gravity": "center",
+            "action": {
+              "type": "message",
+              "label": "B",
+              "text": "Sebenarnya apa sih Covid-19 itu?"
+            },
             "wrap": true
           }
         ]
@@ -111,6 +116,11 @@
             "margin": "sm",
             "align": "start",
             "gravity": "center",
+            "action": {
+              "type": "message",
+              "label": "C",
+              "text": "Apa saja gejala Covid-19?"
+            },
             "wrap": true
           }
         ]
@@ -137,6 +147,11 @@
             "margin": "sm",
             "align": "start",
             "gravity": "center",
+            "action": {
+              "type": "message",
+              "label": "D",
+              "text": "Bagaimana cara melindungi diri?"
+            },
             "wrap": true
           }
         ]
@@ -159,10 +174,15 @@
           },
           {
             "type": "text",
-            "text": "Bagaimana cara melindungi orang lain? ",
+            "text": "Bagaimana cara melindungi orang lain?",
             "margin": "sm",
             "align": "start",
             "gravity": "center",
+            "action": {
+              "type": "message",
+              "label": "E",
+              "text": "Bagaimana cara melindungi orang lain?"
+            },
             "wrap": true
           }
         ]
@@ -189,7 +209,12 @@
             "text": "Masker perlu gak sih?",
             "margin": "sm",
             "align": "start",
-            "gravity": "center"
+            "gravity": "center",
+            "action": {
+              "type": "message",
+              "label": "F",
+              "text": "Masker perlu gak sih?"
+            }
           }
         ]
       },
@@ -215,6 +240,11 @@
             "margin": "sm",
             "align": "start",
             "gravity": "center",
+            "action": {
+              "type": "message",
+              "label": "G",
+              "text": "Rumah Sakit Rujukan Covid-19"
+            },
             "wrap": true
           }
         ]
