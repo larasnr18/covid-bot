@@ -61,23 +61,12 @@ $data = json_decode($body, true);
                 $msgType= $event['message']['type'];
                 if($msgType == 'text')
                 {
-                    $textMsg = $event['message']['text'];
+                    $textMsg = strtolower($event['message']['text']);
                     // send same message as reply to user
                     
                     if($textMsg=='halo'){
                       $message="Halo! Selamat datang di Pusat Informasi Covid-19 powered by Kemkominfo RI. Semoga kamu sehat-sehat selalu.";
-                      $message .= "Apa saja sih yang ingin kamu ketahui mengenai Covid-19?
-
-                      A. Kabar Covid-19 terkini di Indonesia
-                      B. Sebenarnya apa sih Covid-19 itu?
-                      C. Apa saja gejala Covid-19?
-                      D. Bagaimana cara melindungi diri?
-                      E. Bagaimana cara melindungi orang lain? 
-                      F. Masker perlu gak sih?
-                      G. Rumah Sakit Rujukan Covid-19.
-                      
-                      Ketik A, B, C, D, E, F, atau G, lalu kirim ke kami. Maka, kami akan menjawab pertanyaan kamu. 
-                      
+                      $message .= "
                       Bagikan info akurat tentang COVID-19 ke teman dan keluargamu 🙏
                       https://www.covid19.go.id
                       0811 333 99 000
@@ -103,6 +92,27 @@ $data = json_decode($body, true);
                                 ]
                             ],
                         ]);
+                    }else if($textMsg=='kabar covid-19 terkini di indonesia'){
+                        $message="pilihan A";
+                        $result = $bot->replyText($event['replyToken'], $message);
+                    }else if($textMsg=='sebenarnya apa sih covid-19 itu?'){
+                        $message="pilihan B";
+                        $result = $bot->replyText($event['replyToken'], $message);
+                    }else if($textMsg=='apa saja gejala covid-19?'){
+                        $message="pilihan C";
+                        $result = $bot->replyText($event['replyToken'], $message);
+                    }else if($textMsg=='bagaimana cara melindungi diri?'){
+                        $message="pilihan D";
+                        $result = $bot->replyText($event['replyToken'], $message);
+                    }else if($textMsg=='bagaimana cara melindungi orang lain?'){
+                        $message="pilihan E";
+                        $result = $bot->replyText($event['replyToken'], $message);
+                    }else if($textMsg=='masker perlu gak sih?'){
+                        $message="pilihan F";
+                        $result = $bot->replyText($event['replyToken'], $message);
+                    }else if($textMsg=='rumah sakit rujukan covid-19'){
+                        $message="pilihan G";
+                        $result = $bot->replyText($event['replyToken'], $message);
                     }
  
  

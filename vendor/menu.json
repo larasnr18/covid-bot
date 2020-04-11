@@ -1,16 +1,22 @@
 {
   "type": "bubble",
-  "hero": {
-    "type": "image",
-    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_2_restaurant.png",
-    "size": "full",
-    "aspectRatio": "20:13",
-    "aspectMode": "cover",
-    "action": {
-      "type": "uri",
-      "label": "Action",
-      "uri": "https://linecorp.com"
-    }
+  "direction": "ltr",
+  "header": {
+    "type": "box",
+    "layout": "vertical",
+    "flex": 0,
+    "contents": [
+      {
+        "type": "text",
+        "text": "Apa saja sih yang ingin kamu ketahui mengenai Covid-19?",
+        "margin": "lg",
+        "size": "md",
+        "align": "center",
+        "gravity": "center",
+        "weight": "bold",
+        "wrap": true
+      }
+    ]
   },
   "body": {
     "type": "box",
@@ -22,15 +28,6 @@
       "uri": "https://linecorp.com"
     },
     "contents": [
-      {
-        "type": "text",
-        "text": "Apa saja sih yang ingin kamu ketahui mengenai Covid-19?",
-        "size": "md",
-        "align": "center",
-        "gravity": "center",
-        "weight": "bold",
-        "wrap": true
-      },
       {
         "type": "box",
         "layout": "horizontal",
