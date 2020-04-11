@@ -93,7 +93,17 @@ $data = json_decode($body, true);
                             ],
                         ]);
                     }else if($textMsg=='kabar covid-19 terkini di indonesia'){
-                        $message="pilihan A";
+
+                        $message="Situasi virus corona (COVID-19) ".$Last_Update;
+                        $message.="Global";
+                        $message.="Kasus Terkonfirmasi: ".$interConfirmed;
+                        $message.="Sembuh: ".$interRecovered;
+                        $message.="Kematian: ".$intDeaths;
+                        $message.="\nNasional";
+                        $message.="Kasus Terkonfirmasi: ".$natConfirmed;
+                        $message.="Sembuh: ".$natRecovered;
+                        $message.="Kematian: ".$natDeaths;
+                        $message.="Untuk info peta sebaran COVID-19 bisa klik link berikut https://www.covid19.go.id/situasi-virus-corona/";
                         $result = $bot->replyText($event['replyToken'], $message);
                     }else if($textMsg=='sebenarnya apa sih covid-19 itu?'){
                         $message="Penyakit Coronavirus 2019 ( COVID-19 ) adalah penyakit menular yang disebabkan oleh sindrom pernapasan akut coronavirus 2 (SARS-CoV-2). Penyakit ini pertama kali diidentifikasi pada Desember 2019 di Wuhan , ibu kota provinsi Hubei China, dan sejak itu menyebar secara global, mengakibatkan pandemi koronavirus 2019-20 yang sedang berlangsung.";
@@ -193,4 +203,42 @@ $data = json_decode($body, true);
     }
  
 });
+
+$url = "https://api.kawalcorona.com/indonesia/";
+
+$client = curl_init($url);
+curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
+$response = curl_exec($client);
+
+$result = json_decode($response);
+
+$natConfirmed = $result[0]->positif;
+
+$natDeaths = $result[0]->meninggal;
+
+$natRecovered = $result[0]->sembuh;
+
+$datetimeString = $result[1]->lastupdate;
+$Last_Update = date("l d F Y, H:i:s", strtotime($datetimeString));
+
+$intConfirmed = getData("https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Confirmed%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true");
+
+$intDeaths = getData("https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Deaths%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true");
+
+$intRecovered = getData("https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Recovered%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true");
+
+$interConfirmed = $intConfirmed->features[0]->attributes->value;
+$interDeaths = $intDeaths->features[0]->attributes->value;
+$interRecovered = $intRecovered->features[0]->attributes->value;
+
+
+function getData($url){
+
+    $client = curl_init($url);
+    curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
+    $response = curl_exec($client);
+ 
+    return json_decode($response);
+ };
+
 $app->run();
