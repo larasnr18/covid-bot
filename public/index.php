@@ -62,8 +62,32 @@ $data = json_decode($body, true);
                 {
                     // send same message as reply to user
                     
-                    if($event['message']['text']=='info covid'){
-                      $message='ini info';
+                    if($event['message']['text']=='halo'){
+                      $message="Halo! Selamat datang di Pusat Informasi Covid-19 powered by Kemkominfo RI. Semoga kamu sehat-sehat selalu.";
+                      $message .= "Apa saja sih yang ingin kamu ketahui mengenai Covid-19? \n
+
+                      A. Kabar Covid-19 terkini di Indonesia\n
+                      B. Sebenarnya apa sih Covid-19 itu?\n
+                      C. Apa saja gejala Covid-19? \n
+                      D. Bagaimana cara melindungi diri?\n
+                      E. Bagaimana cara melindungi orang lain?\n 
+                      F. Masker perlu gak sih?\n
+                      G. Rumah Sakit Rujukan Covid-19.\n\n
+                      
+                      Ketik A, B, C, D, E, F, atau G, lalu kirim ke kami. Maka, kami akan menjawab pertanyaan kamu. 
+                      \n\n
+                      Bagikan info akurat tentang COVID-19 ke teman dan keluargamu 🙏
+                      https://www.covid19.go.id
+                      0811 333 99 000
+                      \n\n
+                      Mari saling melindungi dari virus corona dengan mengunduh aplikasi pedulilindungi di www.pedulilindungi.id
+                      \n\n
+                      Hotline 119 untuk mendapatkan bantuan apabila ada gejala
+                      \n\n
+                      #LawanBersamaCovid19\n
+                      #DiRumahAja\n
+                      #JagaJarak\n
+                      #MaskerUntukSemua";
                       $result = $bot->replyText($event['replyToken'], $message);
                     }
  
