@@ -12,6 +12,16 @@ use \LINE\LINEBot\MessageBuilder\TextMessageBuilder;
 use \LINE\LINEBot\MessageBuilder\StickerMessageBuilder;
 use \LINE\LINEBot\SignatureValidator as SignatureValidator;
  
+
+function getData($url2){
+
+    $client2 = curl_init($url2);
+    curl_setopt($client2,CURLOPT_RETURNTRANSFER,true);
+    $response2 = curl_exec($client2);
+
+    return json_decode($response2);
+};
+
 $pass_signature = true;
  
 // set LINE channel_access_token and channel_secret
@@ -118,16 +128,6 @@ $data = json_decode($body, true);
                         $interConfirmed = $intConfirmed->features[0]->attributes->value;
                         $interDeaths = $intDeaths->features[0]->attributes->value;
                         $interRecovered = $intRecovered->features[0]->attributes->value;
-
-
-                        function getData($url2){
-
-                            $client2 = curl_init($url2);
-                            curl_setopt($client2,CURLOPT_RETURNTRANSFER,true);
-                            $response2 = curl_exec($client2);
-                        
-                            return json_decode($response2);
-                        };
 
                         $message="Situasi virus corona (COVID-19) ";
                         // $message.="Global";
