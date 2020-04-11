@@ -130,15 +130,15 @@ $data = json_decode($body, true);
                         $interRecovered = $intRecovered->features[0]->attributes->value;
 
                         $message="Situasi virus corona (COVID-19) ";
-                        // $message.="Global";
-                        // $message.="Kasus Terkonfirmasi: ".$interConfirmed;
-                        // $message.="Sembuh: ".$interRecovered;
-                        // $message.="Kematian: ".$intDeaths;
+                        $message.="\nGlobal";
+                        $message.="\nKasus Terkonfirmasi: ".$interConfirmed;
+                        $message.="\nSembuh: ".$interRecovered;
+                        $message.="\nKematian: ".$intDeaths;
                         $message.="\nNasional";
-                        $message.="Kasus Terkonfirmasi: ".$natConfirmed;
-                        $message.="Sembuh: ".$natRecovered;
-                        $message.="Kematian: ".$natDeaths;
-                        $message.="Untuk info peta sebaran COVID-19 bisa klik link berikut https://www.covid19.go.id/situasi-virus-corona/";
+                        $message.="\nKasus Terkonfirmasi: ".$natConfirmed;
+                        $message.="\nSembuh: ".$natRecovered;
+                        $message.="\nKematian: ".$natDeaths;
+                        $message.="\nUntuk info peta sebaran COVID-19 bisa klik link berikut https://www.covid19.go.id/situasi-virus-corona/";
                         $result = $bot->replyText($event['replyToken'], $message);
                     }else if($textMsg=='sebenarnya apa sih covid-19 itu?'){
                         $message="Penyakit Coronavirus 2019 ( COVID-19 ) adalah penyakit menular yang disebabkan oleh sindrom pernapasan akut coronavirus 2 (SARS-CoV-2). Penyakit ini pertama kali diidentifikasi pada Desember 2019 di Wuhan , ibu kota provinsi Hubei China, dan sejak itu menyebar secara global, mengakibatkan pandemi koronavirus 2019-20 yang sedang berlangsung.";
