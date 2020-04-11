@@ -58,11 +58,13 @@ $data = json_decode($body, true);
         {
             if ($event['type'] == 'message')
             {
-                if($event['message']['type'] == 'text')
+                $msgType= $event['message']['type'];
+                if($msgType == 'text')
                 {
+                    $textMsg = $event['message']['text'];
                     // send same message as reply to user
                     
-                    if($event['message']['text']=='halo'){
+                    if($textMsg=='halo'){
                       $message="Halo! Selamat datang di Pusat Informasi Covid-19 powered by Kemkominfo RI. Semoga kamu sehat-sehat selalu.";
                       $message .= "Apa saja sih yang ingin kamu ketahui mengenai Covid-19?
 
@@ -89,6 +91,18 @@ $data = json_decode($body, true);
                       #JagaJarak
                       #MaskerUntukSemua";
                       $result = $bot->replyText($event['replyToken'], $message);
+                    }else if($textMsg=='menu'){
+                        $flexTemplate = file_get_contents("menu.json");
+                        $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
+                            'replyToken' => $event['replyToken'],
+                            'messages'   => [
+                                [
+                                    'type'     => 'flex',
+                                    'altText'  => 'Test Flex Message',
+                                    'contents' => json_decode($flexTemplate)
+                                ]
+                            ],
+                        ]);
                     }
  
  
