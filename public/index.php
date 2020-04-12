@@ -97,7 +97,12 @@ $data = json_decode($body, true);
                                     'type'     => 'flex',
                                     'altText'  => 'Test Flex Message',
                                     'contents' => json_decode($flexTemplate)
+                                ],[
+                                    'type'     => 'text',
+                                    'altText'  => 'Test Flex Message',
+                                    'contents' => json_decode('halo')
                                 ]
+
                             ],
                         ]);
                     }else if($textMsg=='kabar covid-19 terkini di indonesia'){
