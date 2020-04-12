@@ -99,8 +99,7 @@ $data = json_decode($body, true);
                                     'contents' => json_decode($flexTemplate)
                                 ],[
                                     'type'     => 'text',
-                                    'altText'  => 'Test Flex Message',
-                                    'contents' => json_decode('halo')
+                                    'text'  => 'Test Flex Message'
                                 ]
 
                             ],
