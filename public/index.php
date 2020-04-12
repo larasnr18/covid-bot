@@ -146,19 +146,279 @@ $data = json_decode($body, true);
                         $interDeaths = $intDeaths->features[0]->attributes->value;
                         $interRecovered = $intRecovered->features[0]->attributes->value;
 
-                        $message="Situasi virus corona (COVID-19) ";
-                        $message.="\nGlobal";
-                        $message.="\nKasus Terkonfirmasi: ".$interConfirmed;
-                        $message.="\nSembuh: ".$interRecovered;
-                        $message.="\nKematian: ".$interDeaths;
-                        $message.="\nNasional";
-                        $message.="\nKasus Terkonfirmasi: ".$natConfirmed;
-                        $message.="\nSembuh: ".$natRecovered;
-                        $message.="\nKematian: ".$natDeaths;
-                        $message.="\nSumber: https://kawalcorona.com/'
-                        ";
-                        $message.="\nUntuk info peta sebaran COVID-19 bisa klik link berikut https://www.covid19.go.id/situasi-virus-corona/";
-                        $result = $bot->replyText($event['replyToken'], $message);
+                        $flexTemplate = '{
+                            "type": "carousel",
+                            "contents": [
+                              {
+                                "type": "bubble",
+                                "direction": "ltr",
+                                "header": {
+                                  "type": "box",
+                                  "layout": "vertical",
+                                  "contents": [
+                                    {
+                                      "type": "text",
+                                      "text": "Global",
+                                      "align": "center",
+                                      "weight": "bold"
+                                    }
+                                  ]
+                                },
+                                "hero": {
+                                  "type": "image",
+                                  "url": "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/s960x960/93109875_699684144103306_7846826673365319680_o.jpg?_nc_cat=105&_nc_sid=e007fa&_nc_ohc=3h0wz7cKk08AX8loWuB&_nc_ht=scontent-sin6-2.xx&_nc_tp=7&oh=a4e51183a95a9d223507684efb5b45a6&oe=5EBAF173",
+                                  "size": "full",
+                                  "aspectRatio": "1.51:1",
+                                  "aspectMode": "fit"
+                                },
+                                "body": {
+                                  "type": "box",
+                                  "layout": "vertical",
+                                  "contents": [
+                                    {
+                                      "type": "box",
+                                      "layout": "horizontal",
+                                      "contents": [
+                                        {
+                                          "type": "text",
+                                          "text": "Kasus Terkonfirmasi",
+                                          "flex": 3,
+                                          "align": "start",
+                                          "color": "#C4C4C4"
+                                        },
+                                        {
+                                          "type": "filler"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": "'.$interConfirmed.'",
+                                          "flex": 1,
+                                          "align": "end"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "box",
+                                      "layout": "horizontal",
+                                      "contents": [
+                                        {
+                                          "type": "text",
+                                          "text": "Sembuh",
+                                          "flex": 3,
+                                          "align": "start",
+                                          "color": "#C4C4C4"
+                                        },
+                                        {
+                                          "type": "filler"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": "'.$interRecovered.'",
+                                          "flex": 1,
+                                          "align": "end"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "box",
+                                      "layout": "horizontal",
+                                      "contents": [
+                                        {
+                                          "type": "text",
+                                          "text": "Kematian",
+                                          "flex": 3,
+                                          "align": "start",
+                                          "color": "#C4C4C4"
+                                        },
+                                        {
+                                          "type": "filler"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": "'.$interRecovered.'",
+                                          "flex": 1,
+                                          "align": "end"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "footer": {
+                                  "type": "box",
+                                  "layout": "vertical",
+                                  "contents": [
+                                    {
+                                      "type": "text",
+                                      "text": "Sumber: https://kawalcorona.com/",
+                                      "align": "center",
+                                      "color": "#3F3D56"
+                                    },
+                                    {
+                                      "type": "button",
+                                      "action": {
+                                        "type": "uri",
+                                        "label": "Kunjungi Sumber",
+                                        "uri": "https://kawalcorona.com/"
+                                      },
+                                      "color": "#F8BD01",
+                                      "margin": "md",
+                                      "height": "sm",
+                                      "style": "primary"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "type": "bubble",
+                                "direction": "ltr",
+                                "header": {
+                                  "type": "box",
+                                  "layout": "vertical",
+                                  "contents": [
+                                    {
+                                      "type": "text",
+                                      "text": "Nasional",
+                                      "align": "center",
+                                      "weight": "bold"
+                                    }
+                                  ]
+                                },
+                                "hero": {
+                                  "type": "image",
+                                  "url": "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/s960x960/92516455_699684117436642_1982139746545041408_o.jpg?_nc_cat=103&_nc_sid=e007fa&_nc_ohc=aPIVi2ko7jcAX-GFbhe&_nc_ht=scontent-sin6-2.xx&_nc_tp=7&oh=734031b4c9f040f950281169d5889608&oe=5EB77B49",
+                                  "margin": "md",
+                                  "size": "full",
+                                  "aspectRatio": "1.51:1",
+                                  "aspectMode": "fit"
+                                },
+                                "body": {
+                                  "type": "box",
+                                  "layout": "vertical",
+                                  "contents": [
+                                    {
+                                      "type": "box",
+                                      "layout": "horizontal",
+                                      "contents": [
+                                        {
+                                          "type": "text",
+                                          "text": "Kasus Terkonfirmasi",
+                                          "flex": 3,
+                                          "align": "start",
+                                          "color": "#C4C4C4"
+                                        },
+                                        {
+                                          "type": "filler"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": "'.$natConfirmed.'",
+                                          "flex": 1,
+                                          "align": "end"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "box",
+                                      "layout": "horizontal",
+                                      "contents": [
+                                        {
+                                          "type": "text",
+                                          "text": "Sembuh",
+                                          "flex": 3,
+                                          "align": "start",
+                                          "color": "#C4C4C4"
+                                        },
+                                        {
+                                          "type": "filler"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": "'.$natRecovered.'",
+                                          "flex": 1,
+                                          "align": "end"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "box",
+                                      "layout": "horizontal",
+                                      "contents": [
+                                        {
+                                          "type": "text",
+                                          "text": "Kematian",
+                                          "flex": 3,
+                                          "color": "#C4C4C4"
+                                        },
+                                        {
+                                          "type": "filler"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": "'.$natDeaths.'",
+                                          "flex": 1,
+                                          "align": "end"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "footer": {
+                                  "type": "box",
+                                  "layout": "vertical",
+                                  "contents": [
+                                    {
+                                      "type": "text",
+                                      "text": "Sumber: https://kawalcorona.com/",
+                                      "align": "center",
+                                      "color": "#3F3D56"
+                                    },
+                                    {
+                                      "type": "button",
+                                      "action": {
+                                        "type": "uri",
+                                        "label": "Kunjungi Sumber",
+                                        "uri": "https://kawalcorona.com/"
+                                      },
+                                      "color": "#F8BD01",
+                                      "margin": "md",
+                                      "height": "sm",
+                                      "style": "primary"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                        }';
+
+                        $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
+                            'replyToken' => $event['replyToken'],
+                            'messages'   => [
+                                [
+                                    'type'     => 'text',
+                                    'text'  => 'Situasi virus corona (COVID-19)'
+                                ],
+                                [
+                                    'type'     => 'flex',
+                                    'altText'  => 'Test Flex Message',
+                                    'contents' => json_decode($flexTemplate)
+                                ]
+
+                            ],
+                        ]);
+                        
+                        // $message="Situasi virus corona (COVID-19) ";
+                        // $message.="\nGlobal";
+                        // $message.="\nKasus Terkonfirmasi: ".$interConfirmed;
+                        // $message.="\nSembuh: ".$interRecovered;
+                        // $message.="\nKematian: ".$interDeaths;
+                        // $message.="\nNasional";
+                        // $message.="\nKasus Terkonfirmasi: ".$natConfirmed;
+                        // $message.="\nSembuh: ".$natRecovered;
+                        // $message.="\nKematian: ".$natDeaths;
+                        // $message.="\nSumber: https://kawalcorona.com/'
+                        // ";
+                        // $message.="\nUntuk info peta sebaran COVID-19 bisa klik link berikut https://www.covid19.go.id/situasi-virus-corona/";
+                        // $result = $bot->replyText($event['replyToken'], $message);
                     }else if($textMsg=='sebenarnya apa sih covid-19 itu?'){
                         $message="Penyakit Coronavirus 2019 ( COVID-19 ) adalah penyakit menular yang disebabkan oleh sindrom pernapasan akut coronavirus 2 (SARS-CoV-2). Penyakit ini pertama kali diidentifikasi pada Desember 2019 di Wuhan, ibu kota provinsi Hubei China, dan sejak itu menyebar secara global, mengakibatkan pandemi koronavirus 2019-20 yang sedang berlangsung.";
                         $result = $bot->replyText($event['replyToken'], $message);

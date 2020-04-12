@@ -9,7 +9,6 @@
       {
         "type": "text",
         "text": "Apa saja sih yang ingin kamu ketahui mengenai Covid-19?",
-        "margin": "lg",
         "size": "md",
         "align": "center",
         "gravity": "center",
@@ -29,225 +28,112 @@
     },
     "contents": [
       {
-        "type": "box",
-        "layout": "horizontal",
-        "spacing": "sm",
-        "contents": [
-          {
-            "type": "button",
-            "action": {
-              "type": "message",
-              "label": "A",
-              "text": "Kabar Covid-19 terkini di Indonesia"
-            },
-            "flex": 0,
-            "color": "#102569",
-            "height": "sm",
-            "style": "primary"
-          },
-          {
-            "type": "text",
-            "text": "Kabar Covid-19 terkini di Indonesia",
-            "gravity": "center",
-            "action": {
-              "type": "message",
-              "label": "A",
-              "text": "Kabar Covid-19 terkini di Indonesia"
-            },
-            "wrap": true
-          }
-        ]
+        "type": "text",
+        "text": "Kabar Covid-19 terkini di Indonesia",
+        "align": "start",
+        "gravity": "center",
+        "action": {
+          "type": "message",
+          "label": "A",
+          "text": "Kabar Covid-19 terkini di Indonesia"
+        },
+        "wrap": true
       },
       {
-        "type": "box",
-        "layout": "horizontal",
-        "spacing": "sm",
-        "contents": [
-          {
-            "type": "button",
-            "action": {
-              "type": "message",
-              "label": "B",
-              "text": "Sebenarnya apa sih Covid-19 itu?"
-            },
-            "flex": 0,
-            "color": "#102569",
-            "margin": "none",
-            "height": "sm",
-            "style": "primary",
-            "gravity": "center"
-          },
-          {
-            "type": "text",
-            "text": "Sebenarnya apa sih Covid-19 itu?",
-            "flex": 10,
-            "align": "start",
-            "gravity": "center",
-            "action": {
-              "type": "message",
-              "label": "B",
-              "text": "Sebenarnya apa sih Covid-19 itu?"
-            },
-            "wrap": true
-          }
-        ]
+        "type": "separator"
       },
       {
-        "type": "box",
-        "layout": "horizontal",
-        "contents": [
-          {
-            "type": "button",
-            "action": {
-              "type": "message",
-              "label": "C",
-              "text": "Apa saja gejala Covid-19?"
-            },
-            "flex": 0,
-            "color": "#102569",
-            "margin": "none",
-            "height": "sm",
-            "style": "primary"
-          },
-          {
-            "type": "text",
-            "text": "Apa saja gejala Covid-19?",
-            "flex": 10,
-            "margin": "sm",
-            "align": "start",
-            "gravity": "center",
-            "action": {
-              "type": "message",
-              "label": "C",
-              "text": "Apa saja gejala Covid-19?"
-            },
-            "wrap": true
-          }
-        ]
+        "type": "text",
+        "text": "Sebenarnya apa sih Covid-19 itu?",
+        "flex": 10,
+        "align": "start",
+        "gravity": "center",
+        "action": {
+          "type": "message",
+          "label": "B",
+          "text": "Sebenarnya apa sih Covid-19 itu?"
+        },
+        "wrap": true
       },
       {
-        "type": "box",
-        "layout": "horizontal",
-        "contents": [
-          {
-            "type": "button",
-            "action": {
-              "type": "message",
-              "label": "D",
-              "text": "Bagaimana cara melindungi diri?"
-            },
-            "flex": 0,
-            "color": "#102569",
-            "height": "sm",
-            "style": "primary"
-          },
-          {
-            "type": "text",
-            "text": "Bagaimana cara melindungi diri?",
-            "margin": "sm",
-            "align": "start",
-            "gravity": "center",
-            "action": {
-              "type": "message",
-              "label": "D",
-              "text": "Bagaimana cara melindungi diri?"
-            },
-            "wrap": true
-          }
-        ]
+        "type": "separator"
       },
       {
-        "type": "box",
-        "layout": "horizontal",
-        "contents": [
-          {
-            "type": "button",
-            "action": {
-              "type": "message",
-              "label": "E",
-              "text": "Bagaimana cara melindungi orang lain?"
-            },
-            "flex": 0,
-            "color": "#102569",
-            "height": "sm",
-            "style": "primary"
-          },
-          {
-            "type": "text",
-            "text": "Bagaimana cara melindungi orang lain?",
-            "margin": "sm",
-            "align": "start",
-            "gravity": "center",
-            "action": {
-              "type": "message",
-              "label": "E",
-              "text": "Bagaimana cara melindungi orang lain?"
-            },
-            "wrap": true
-          }
-        ]
+        "type": "text",
+        "text": "Apa saja gejala Covid-19?",
+        "flex": 10,
+        "margin": "sm",
+        "align": "start",
+        "gravity": "center",
+        "action": {
+          "type": "message",
+          "label": "C",
+          "text": "Apa saja gejala Covid-19?"
+        },
+        "wrap": true
       },
       {
-        "type": "box",
-        "layout": "horizontal",
-        "contents": [
-          {
-            "type": "button",
-            "action": {
-              "type": "message",
-              "label": "F",
-              "text": "Masker perlu gak sih?"
-            },
-            "flex": 0,
-            "color": "#102569",
-            "height": "sm",
-            "style": "primary",
-            "gravity": "center"
-          },
-          {
-            "type": "text",
-            "text": "Masker perlu gak sih?",
-            "margin": "sm",
-            "align": "start",
-            "gravity": "center",
-            "action": {
-              "type": "message",
-              "label": "F",
-              "text": "Masker perlu gak sih?"
-            }
-          }
-        ]
+        "type": "separator"
       },
       {
-        "type": "box",
-        "layout": "horizontal",
-        "contents": [
-          {
-            "type": "button",
-            "action": {
-              "type": "message",
-              "label": "G",
-              "text": "Rumah Sakit Rujukan Covid-19"
-            },
-            "flex": 0,
-            "color": "#102569",
-            "height": "sm",
-            "style": "primary"
-          },
-          {
-            "type": "text",
-            "text": "Rumah Sakit Rujukan Covid-19",
-            "margin": "sm",
-            "align": "start",
-            "gravity": "center",
-            "action": {
-              "type": "message",
-              "label": "G",
-              "text": "Rumah Sakit Rujukan Covid-19"
-            },
-            "wrap": true
-          }
-        ]
+        "type": "text",
+        "text": "Bagaimana cara melindungi diri?",
+        "margin": "sm",
+        "align": "start",
+        "gravity": "center",
+        "action": {
+          "type": "message",
+          "label": "D",
+          "text": "Bagaimana cara melindungi diri?"
+        },
+        "wrap": true
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "text",
+        "text": "Bagaimana cara melindungi orang lain?",
+        "margin": "sm",
+        "align": "start",
+        "gravity": "center",
+        "action": {
+          "type": "message",
+          "label": "E",
+          "text": "Bagaimana cara melindungi orang lain?"
+        },
+        "wrap": true
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "text",
+        "text": "Masker perlu gak sih?",
+        "margin": "sm",
+        "align": "start",
+        "gravity": "center",
+        "action": {
+          "type": "message",
+          "label": "F",
+          "text": "Masker perlu gak sih?"
+        }
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "text",
+        "text": "Rumah Sakit Rujukan Covid-19",
+        "margin": "sm",
+        "align": "start",
+        "gravity": "center",
+        "action": {
+          "type": "message",
+          "label": "G",
+          "text": "Rumah Sakit Rujukan Covid-19"
+        },
+        "wrap": true
       }
     ]
   },
@@ -256,15 +142,14 @@
     "layout": "vertical",
     "contents": [
       {
-        "type": "spacer",
-        "size": "xxl"
-      },
-      {
-        "type": "text",
-        "text": "Bagikan info akurat tentang COVID-19 ke teman dan keluargamu 🙏",
-        "size": "sm",
-        "weight": "regular",
-        "wrap": true
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "Kunjungi Situs",
+          "uri": "https://www.covid19.go.id"
+        },
+        "color": "#3F3D56",
+        "style": "primary"
       }
     ]
   }
