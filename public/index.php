@@ -76,22 +76,19 @@ $data = json_decode($body, true);
                     $textMsg = strtolower($event['message']['text']);
                     // send same message as reply to user
                     
-                    if($textMsg=='halo'){
-                      $message='Halo! Selamat datang di Pusat Informasi Covid-19 powered by Kemkominfo RI. Semoga kamu sehat-sehat selalu.';
-                      $message .= 'Bagikan info akurat tentang COVID-19 ke teman dan keluargamu 🙏
-                      https://www.covid19.go.id
-                      0811 333 99 000
-                      
-                      Mari saling melindungi dari virus corona dengan mengunduh aplikasi pedulilindungi di www.pedulilindungi.id
-                      
-                      Hotline 119 untuk mendapatkan bantuan apabila ada gejala
-                      
-                      #LawanBersamaCovid19
-                      #DiRumahAja
-                      #JagaJarak
-                      #MaskerUntukSemua';
-                      $result = $bot->replyText($event['replyToken'], $message);
-                    }else if($textMsg=='menu'){
+                    if($textMsg=='halo'||$textMsg=='hai'||$textMsg=='hi'||$textMsg=='tes'||$textMsg=='test'){
+                        $textMessageBuilder1 = new TextMessageBuilder('Halo! Perkenalkan aku Pico. Aku adalah Pusat Informasi Covid-19. Kamu bisa tanya-tanya mengenai info terkait Covid-19 ke aku. Semoga kamu sehat-sehat selalu ya.\n\nUntuk memulai obrolan, kamu bisa ketik "Menu" atau klik menu di bawah ya.');
+                        $textMessageBuilder2 = new TextMessageBuilder('Bagikan info akurat tentang COVID-19 ke teman dan keluargamu 🙏\nUntuk info lebih lengkap kamu bisa kunjugi https://www.covid19.go.id\nHotline 119 untuk mendapatkan bantuan apabila ada gejala');
+
+                        $stickerMessageBuilder = new StickerMessageBuilder(1, 106);
+                        
+                        $multiMessageBuilder = new MultiMessageBuilder();
+                        $multiMessageBuilder->add($textMessageBuilder1);
+                        $multiMessageBuilder->add($textMessageBuilder2);
+                        $multiMessageBuilder->add($stickerMessageBuilder);
+                        
+                        $result = $bot->replyMessage($event['replyToken'], $multiMessageBuilder);
+                    }else if($textMsg=='tanya pico'){
                         $flexTemplate = file_get_contents("../vendor/menu.json");
                         $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
                             'replyToken' => $event['replyToken'],
@@ -138,10 +135,12 @@ $data = json_decode($body, true);
                         $message.="\nKasus Terkonfirmasi: ".$natConfirmed;
                         $message.="\nSembuh: ".$natRecovered;
                         $message.="\nKematian: ".$natDeaths;
+                        $message.="\nSumber: https://kawalcorona.com/'
+                        ";
                         $message.="\nUntuk info peta sebaran COVID-19 bisa klik link berikut https://www.covid19.go.id/situasi-virus-corona/";
                         $result = $bot->replyText($event['replyToken'], $message);
                     }else if($textMsg=='sebenarnya apa sih covid-19 itu?'){
-                        $message="Penyakit Coronavirus 2019 ( COVID-19 ) adalah penyakit menular yang disebabkan oleh sindrom pernapasan akut coronavirus 2 (SARS-CoV-2). Penyakit ini pertama kali diidentifikasi pada Desember 2019 di Wuhan , ibu kota provinsi Hubei China, dan sejak itu menyebar secara global, mengakibatkan pandemi koronavirus 2019-20 yang sedang berlangsung.";
+                        $message="Penyakit Coronavirus 2019 ( COVID-19 ) adalah penyakit menular yang disebabkan oleh sindrom pernapasan akut coronavirus 2 (SARS-CoV-2). Penyakit ini pertama kali diidentifikasi pada Desember 2019 di Wuhan, ibu kota provinsi Hubei China, dan sejak itu menyebar secara global, mengakibatkan pandemi koronavirus 2019-20 yang sedang berlangsung.";
                         $result = $bot->replyText($event['replyToken'], $message);
                     }else if($textMsg=='apa saja gejala covid-19?'){
                         $message="Secara umum ada 3 gejala umum yang bisa menandakan seseorang terinfeksi virus Corona, yaitu:
