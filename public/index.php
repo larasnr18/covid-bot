@@ -77,8 +77,8 @@ $data = json_decode($body, true);
                     // send same message as reply to user
                     
                     if($textMsg=='halo'||$textMsg=='hai'||$textMsg=='hi'||$textMsg=='tes'||$textMsg=='test'){
-                        $textMessageBuilder1 = new TextMessageBuilder('Halo! Perkenalkan aku Pico. Aku adalah Pusat Informasi Covid-19. Kamu bisa tanya-tanya mengenai info terkait Covid-19 ke aku. Semoga kamu sehat-sehat selalu ya.\n\nUntuk memulai obrolan, kamu bisa ketik "Menu" atau klik menu di bawah ya.');
-                        $textMessageBuilder2 = new TextMessageBuilder('Bagikan info akurat tentang COVID-19 ke teman dan keluargamu 🙏\nUntuk info lebih lengkap kamu bisa kunjugi https://www.covid19.go.id\nHotline 119 untuk mendapatkan bantuan apabila ada gejala');
+                        $textMessageBuilder1 = new TextMessageBuilder("Halo! Perkenalkan aku Pico. Aku adalah Pusat Informasi Covid-19. Kamu bisa tanya-tanya mengenai info terkait Covid-19 ke aku. Semoga kamu sehat-sehat selalu ya.\n\nUntuk memulai obrolan, kamu bisa ketik 'Menu' atau klik menu di bawah ya.");
+                        $textMessageBuilder2 = new TextMessageBuilder("Bagikan info akurat tentang COVID-19 ke teman dan keluargamu 🙏\nUntuk info lebih lengkap kamu bisa kunjugi https://www.covid19.go.id\nHotline 119 untuk mendapatkan bantuan apabila ada gejala");
 
                         $stickerMessageBuilder = new StickerMessageBuilder(1, 106);
                         
