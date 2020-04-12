@@ -181,7 +181,7 @@ $data = json_decode($body, true);
                                       "contents": [
                                         {
                                           "type": "text",
-                                          "text": "Kasus Terkonfirmasi",
+                                          "text": "Terkonfirmasi",
                                           "flex": 3,
                                           "align": "start",
                                           "color": "#C4C4C4"
@@ -192,7 +192,7 @@ $data = json_decode($body, true);
                                         {
                                           "type": "text",
                                           "text": "'.$interConfirmed.'",
-                                          "flex": 1,
+                                          "flex": 3,
                                           "align": "end"
                                         }
                                       ]
@@ -214,7 +214,7 @@ $data = json_decode($body, true);
                                         {
                                           "type": "text",
                                           "text": "'.$interRecovered.'",
-                                          "flex": 1,
+                                          "flex": 3,
                                           "align": "end"
                                         }
                                       ]
@@ -236,7 +236,7 @@ $data = json_decode($body, true);
                                         {
                                           "type": "text",
                                           "text": "'.$interRecovered.'",
-                                          "flex": 1,
+                                          "flex": 3,
                                           "align": "end"
                                         }
                                       ]
@@ -301,7 +301,7 @@ $data = json_decode($body, true);
                                       "contents": [
                                         {
                                           "type": "text",
-                                          "text": "Kasus Terkonfirmasi",
+                                          "text": "Terkonfirmasi",
                                           "flex": 3,
                                           "align": "start",
                                           "color": "#C4C4C4"
@@ -312,7 +312,7 @@ $data = json_decode($body, true);
                                         {
                                           "type": "text",
                                           "text": "'.$natConfirmed.'",
-                                          "flex": 1,
+                                          "flex": 3,
                                           "align": "end"
                                         }
                                       ]
@@ -334,7 +334,7 @@ $data = json_decode($body, true);
                                         {
                                           "type": "text",
                                           "text": "'.$natRecovered.'",
-                                          "flex": 1,
+                                          "flex": 3,
                                           "align": "end"
                                         }
                                       ]
@@ -355,7 +355,7 @@ $data = json_decode($body, true);
                                         {
                                           "type": "text",
                                           "text": "'.$natDeaths.'",
-                                          "flex": 1,
+                                          "flex": 3,
                                           "align": "end"
                                         }
                                       ]
@@ -405,20 +405,6 @@ $data = json_decode($body, true);
 
                             ],
                         ]);
-                        
-                        // $message="Situasi virus corona (COVID-19) ";
-                        // $message.="\nGlobal";
-                        // $message.="\nKasus Terkonfirmasi: ".$interConfirmed;
-                        // $message.="\nSembuh: ".$interRecovered;
-                        // $message.="\nKematian: ".$interDeaths;
-                        // $message.="\nNasional";
-                        // $message.="\nKasus Terkonfirmasi: ".$natConfirmed;
-                        // $message.="\nSembuh: ".$natRecovered;
-                        // $message.="\nKematian: ".$natDeaths;
-                        // $message.="\nSumber: https://kawalcorona.com/'
-                        // ";
-                        // $message.="\nUntuk info peta sebaran COVID-19 bisa klik link berikut https://www.covid19.go.id/situasi-virus-corona/";
-                        // $result = $bot->replyText($event['replyToken'], $message);
                     }else if($textMsg=='sebenarnya apa sih covid-19 itu?'){
                         $message="Penyakit Coronavirus 2019 ( COVID-19 ) adalah penyakit menular yang disebabkan oleh sindrom pernapasan akut coronavirus 2 (SARS-CoV-2). Penyakit ini pertama kali diidentifikasi pada Desember 2019 di Wuhan, ibu kota provinsi Hubei China, dan sejak itu menyebar secara global, mengakibatkan pandemi koronavirus 2019-20 yang sedang berlangsung.";
                         $result = $bot->replyText($event['replyToken'], $message);
