@@ -264,6 +264,10 @@ $data = json_decode($body, true);
                                       "margin": "md",
                                       "height": "sm",
                                       "style": "primary"
+                                    },
+                                    {
+                                      "type": "spacer",
+                                      "size": "md"
                                     }
                                   ]
                                 }
@@ -383,6 +387,10 @@ $data = json_decode($body, true);
                                       "margin": "md",
                                       "height": "sm",
                                       "style": "primary"
+                                    },
+                                    {
+                                      "type": "spacer",
+                                      "size": "md"
                                     }
                                   ]
                                 }
@@ -409,82 +417,74 @@ $data = json_decode($body, true);
                         $message="Penyakit Coronavirus 2019 ( COVID-19 ) adalah penyakit menular yang disebabkan oleh sindrom pernapasan akut coronavirus 2 (SARS-CoV-2). Penyakit ini pertama kali diidentifikasi pada Desember 2019 di Wuhan, ibu kota provinsi Hubei China, dan sejak itu menyebar secara global, mengakibatkan pandemi koronavirus 2019-20 yang sedang berlangsung.";
                         $result = $bot->replyText($event['replyToken'], $message);
                     }else if($textMsg=='apa saja gejala covid-19?'){
-                        $message="Secara umum ada 3 gejala umum yang bisa menandakan seseorang terinfeksi virus Corona, yaitu:
 
-                        Demam (suhu tubuh di atas 38 derajat Celsius)
-                        Batuk
-                        Sesak napas
-                        Menurut penelitian, gejala COVID-19 muncul dalam waktu 2 hari sampai 2 minggu setelah terpapar virus Corona.";
-                        $result = $bot->replyText($event['replyToken'], $message);
+                        $flexTemplate = file_get_contents("../vendor/gejala.json");
+                        $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
+                            'replyToken' => $event['replyToken'],
+                            'messages'   => [
+                                [
+                                    'type'     => 'text',
+                                    'text'  => 'Situasi virus corona (COVID-19)'
+                                ],
+                                [
+                                    'type'     => 'flex',
+                                    'altText'  => 'Test Flex Message',
+                                    'contents' => json_decode($flexTemplate)
+                                ]
+
+                            ],
+                        ]);
                     }else if($textMsg=='bagaimana cara melindungi diri?'){
-                        $message="Tunjukkan aksimu! 
+                        $flexTemplate = file_get_contents("../vendor/lindungi.json");
+                        $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
+                            'replyToken' => $event['replyToken'],
+                            'messages'   => [
+                                [
+                                    'type'     => 'text',
+                                    'text'  => 'Situasi virus corona (COVID-19)'
+                                ],
+                                [
+                                    'type'     => 'flex',
+                                    'altText'  => 'Test Flex Message',
+                                    'contents' => json_decode($flexTemplate)
+                                ]
 
-                        Lindungi diri. Lindungi sesama.
-                        
-                        Apa AKSI nyata yang dapat kamu lakukan? 
-                        
-                        ✅ Tetap di rumah. Bekerja, belajar dan beribadah di rumah
-                        
-                        ✅ Jaga jarak minimal 1 meter dengan orang di lain
-                        
-                        ✅ Jangan kontak langsung dengan orang bergejala COVID-19. Lakukan komunikasi via telepon, chat atau video call
-                        
-                        ✅ Hindari kerumunan
-                        
-                        ✅ Jangan sentuh mata, hidung dan mulut
-                        
-                        ✅ Selalu cuci tangan pakai sabun dan air mengalir! Sebelum makan dan menyiapkan makanan, setelah dari toilet, setelah memegang binatang dan sehabis berpergian
-                        
-                        ✅ Ketika batuk atau bersin, tutup mulut dan hidung dengan siku terlipat atau tisu. Buang langsung tisu ke tempat sampah setelah digunakan
-                        
-                        ✅ Beritahu petugas kesehatan jika kamu mengalami gejala, pernah kontak erat dengan orang bergejala atau bepergian ke wilayah terjangkit COVID-19
-                        
-                        ✅ Jika petugas kesehatan menyatakan kamu harus isolasi diri, maka patuhi agar lekas sembuh dan tidak menulari orang lain
-                        
-                        ✅ Bersikaplah terbuka tentang statusmu pada orang lain di sekitar. Ini adalah bentuk nyata kepedulianmu pada diri sendiri dan sesama";
-                        $result = $bot->replyText($event['replyToken'], $message);
+                            ],
+                        ]);
                     }else if($textMsg=='bagaimana cara melindungi orang lain?'){
-                        $message="Yang bisa kamu lakukan untuk melindungi orang-orang terdekatmu dari Covid-19, yaitu:
+                        $flexTemplate = file_get_contents("../vendor/lindungi_orang_lain.json");
+                        $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
+                            'replyToken' => $event['replyToken'],
+                            'messages'   => [
+                                [
+                                    'type'     => 'text',
+                                    'text'  => 'Situasi virus corona (COVID-19)'
+                                ],
+                                [
+                                    'type'     => 'flex',
+                                    'altText'  => 'Test Flex Message',
+                                    'contents' => json_decode($flexTemplate)
+                                ]
 
-                        ✅Saat kamu batuk atau bersin, jangan lupa untuk menjauh dan menutup mulut serta  hidung kamu dengan tissue, saputangan, atau lipatan siku.
-                        
-                        ✅Segera membuang tisu atau masker yang telah kamu gunakan ke tempat sampah. 
-                        
-                        ✅Jangan lupa untuk merobek masker yang telah digunakan ya, untuk mencegah penggunaan ulang masker. 
-                        
-                        ✅Jangan lupa untuk mencuci tanganmu dengan sabun setelah batuk atau bersin. 
-                        
-                        ✅Jangan meludah disembarang tempat
-                        
-                        ✅Segera menghubungi Rumah Sakit rujukan bila orang terdekatmu mengalami gejala Covid-19 dengan menghubungi 119";
-                        $result = $bot->replyText($event['replyToken'], $message);
+                            ],
+                        ]);
                     }else if($textMsg=='masker perlu gak sih?'){
-                        $message="Semua orang harus menggunakan masker kalau terpaksa beraktivitas di luar rumah.
+                        $flexTemplate = file_get_contents("../vendor/masker.json");
+                        $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
+                            'replyToken' => $event['replyToken'],
+                            'messages'   => [
+                                [
+                                    'type'     => 'text',
+                                    'text'  => 'Situasi virus corona (COVID-19)'
+                                ],
+                                [
+                                    'type'     => 'flex',
+                                    'altText'  => 'Test Flex Message',
+                                    'contents' => json_decode($flexTemplate)
+                                ]
 
-                        Kamu bisa menggunakan masker kain tiga lapis yang dapat dicuci dan digunakan berkali-kali, agar masker bedah dan N-95 yang sekali pakai bisa ditujukan untuk petugas medis.
-                        
-                        Jangan lupa untuk mencuci masker kain menggunakan air sabun agar tetap bersih dan efektif untuk mencegah penyebaran virus COVID-19.";
-                        $result = $bot->replyText($event['replyToken'], $message);
-                    }else if($textMsg=='rumah sakit rujukan covid-19'){
-                        $url = "https://api.kawalcorona.com/indonesia/";
-
-                        $client = curl_init($url);
-                        curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
-                        $response = curl_exec($client);
-
-                        $result = json_decode($response);
-
-                        $Confirmed = $result[0]->positif;
-
-                        $Deaths = $result[0]->meninggal;
-
-                        $Recovered = $result[0]->sembuh;
-
-                        $datetimeString = $result[1]->lastupdate;
-                        $Last_Update = date("l d F Y, H:i:s", strtotime($datetimeString));
-
-                        $message="Konfirmasi:".$Confirmed;
-                        $result = $bot->replyText($event['replyToken'], $message);
+                            ],
+                        ]);
                     }
  
  

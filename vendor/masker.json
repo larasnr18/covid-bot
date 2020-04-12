@@ -1,0 +1,37 @@
+{
+  "type": "bubble",
+  "direction": "ltr",
+  "hero": {
+    "type": "image",
+    "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/93372188_699719850766402_8519828888799412224_n.jpg?_nc_cat=111&_nc_sid=e007fa&_nc_ohc=2wl-xicAaUgAX8Hrsjf&_nc_ht=scontent-sin6-1.xx&oh=040862af950964c7b7c40b41ee3393c0&oe=5EB9B44D",
+    "size": "full",
+    "aspectRatio": "1.91:1",
+    "aspectMode": "fit"
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "Semua orang harus menggunakan masker kalau terpaksa beraktivitas di luar rumah.",
+        "margin": "sm",
+        "align": "start",
+        "weight": "bold",
+        "wrap": true
+      },
+      {
+        "type": "text",
+        "text": "Kamu bisa menggunakan masker kain tiga lapis yang dapat dicuci dan digunakan berkali-kali, agar masker bedah dan N-95 yang sekali pakai bisa ditujukan untuk petugas medis.",
+        "margin": "md",
+        "wrap": true
+      },
+      {
+        "type": "text",
+        "text": "Jangan lupa untuk mencuci masker kain menggunakan air sabun agar tetap bersih dan efektif untuk mencegah penyebaran virus COVID-19.",
+        "margin": "md",
+        "wrap": true
+      }
+    ]
+  }
+}

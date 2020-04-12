@@ -1,0 +1,213 @@
+{
+  "type": "bubble",
+  "header": {
+    "type": "box",
+    "layout": "vertical",
+    "flex": 0,
+    "contents": [
+      {
+        "type": "text",
+        "text": "Tunjukkan aksimu!",
+        "size": "xl",
+        "weight": "bold"
+      }
+    ]
+  },
+  "hero": {
+    "type": "image",
+    "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/p960x960/92703543_699702737434780_5470545551957164032_o.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=7I6Cn03-2TAAX-RSRAz&_nc_ht=scontent-sin6-1.xx&_nc_tp=6&oh=104ae7f49b3a0b6dadb7a46fd1007c81&oe=5EB8E266",
+    "margin": "none",
+    "size": "lg",
+    "aspectMode": "fit",
+    "action": {
+      "type": "uri",
+      "label": "Action",
+      "uri": "https://linecorp.com"
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "md",
+    "action": {
+      "type": "uri",
+      "label": "Action",
+      "uri": "https://linecorp.com"
+    },
+    "contents": [
+      {
+        "type": "text",
+        "text": "Lindungi diri. Lindungi sesama. Apa AKSI nyata yang dapat kamu lakukan?",
+        "wrap": true
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Tetap di rumah. Bekerja, belajar dan beribadah di rumah",
+                "margin": "sm",
+                "align": "start",
+                "wrap": true
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Jaga jarak minimal 1 meter dengan orang di lain",
+                "margin": "sm",
+                "wrap": true
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Jangan kontak langsung dengan orang bergejala COVID-19. Lakukan komunikasi via telepon, chat atau video call",
+                "margin": "sm",
+                "wrap": true
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Hindari kerumunan",
+                "margin": "sm",
+                "wrap": true
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Jangan sentuh mata, hidung dan mulut",
+                "margin": "sm",
+                "wrap": true
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Selalu cuci tangan pakai sabun dan air mengalir! Sebelum makan dan menyiapkan makanan, setelah dari toilet, setelah memegang binatang dan sehabis berpergian",
+                "margin": "sm",
+                "wrap": true
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Ketika batuk atau bersin, tutup mulut dan hidung dengan siku terlipat atau tisu. Buang langsung tisu ke tempat sampah setelah digunakan",
+                "margin": "sm",
+                "wrap": true
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Beritahu petugas kesehatan jika kamu mengalami gejala, pernah kontak erat dengan orang bergejala atau bepergian ke wilayah terjangkit COVID-19",
+                "margin": "sm",
+                "wrap": true
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Jika petugas kesehatan menyatakan kamu harus isolasi diri, maka patuhi agar lekas sembuh dan tidak menulari orang lain",
+                "margin": "sm",
+                "wrap": true
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Bersikaplah terbuka tentang statusmu pada orang lain di sekitar. Ini adalah bentuk nyata kepedulianmu pada diri sendiri dan sesama",
+                "margin": "sm",
+                "wrap": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

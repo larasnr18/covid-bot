@@ -1,0 +1,150 @@
+{
+  "type": "bubble",
+  "header": {
+    "type": "box",
+    "layout": "vertical",
+    "flex": 0,
+    "contents": [
+      {
+        "type": "text",
+        "text": "Tunjukkan aksimu!",
+        "size": "xl",
+        "align": "center",
+        "weight": "bold"
+      }
+    ]
+  },
+  "hero": {
+    "type": "image",
+    "url": "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/s960x960/92567932_699712400767147_1148636145152688128_o.jpg?_nc_cat=105&_nc_sid=e007fa&_nc_ohc=5F_MlrYlog0AX-4L9qX&_nc_ht=scontent-sin6-2.xx&_nc_tp=7&oh=a3bc64ef4c66935c64af190bcc644b35&oe=5EBA2D4D",
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "fit",
+    "action": {
+      "type": "uri",
+      "label": "Action",
+      "uri": "https://linecorp.com"
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "md",
+    "action": {
+      "type": "uri",
+      "label": "Action",
+      "uri": "https://linecorp.com"
+    },
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Yang bisa kamu lakukan untuk melindungi orang-orang terdekatmu dari Covid-19, yaitu:",
+            "wrap": true
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "margin": "md",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Saat kamu batuk atau bersin, jangan lupa untuk menjauh dan menutup mulut serta  hidung kamu dengan tissue, saputangan, atau lipatan siku.",
+                "margin": "sm",
+                "wrap": true
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Segera membuang tisu atau masker yang telah kamu gunakan ke tempat sampah.",
+                "margin": "sm",
+                "wrap": true
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Jangan lupa untuk merobek masker yang telah digunakan ya, untuk mencegah penggunaan ulang masker.",
+                "margin": "sm",
+                "wrap": true
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Jangan lupa untuk mencuci tanganmu dengan sabun setelah batuk atau bersin.",
+                "margin": "sm",
+                "wrap": true
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Jangan meludah disembarang tempat.",
+                "margin": "sm",
+                "wrap": true
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/92818485_699702717434782_1297002771030999040_n.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=cfs8xeH6IUkAX-tnCw2&_nc_ht=scontent-sin6-1.xx&oh=ce2c56482fba3e05d74e16b204c6636c&oe=5EBA99A8"
+              },
+              {
+                "type": "text",
+                "text": "Segera menghubungi Rumah Sakit rujukan bila orang terdekatmu mengalami gejala Covid-19 dengan menghubungi 119.",
+                "margin": "sm",
+                "wrap": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

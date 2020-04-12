@@ -118,22 +118,6 @@
           "label": "F",
           "text": "Masker perlu gak sih?"
         }
-      },
-      {
-        "type": "separator"
-      },
-      {
-        "type": "text",
-        "text": "Rumah Sakit Rujukan Covid-19",
-        "margin": "sm",
-        "align": "start",
-        "gravity": "center",
-        "action": {
-          "type": "message",
-          "label": "G",
-          "text": "Rumah Sakit Rujukan Covid-19"
-        },
-        "wrap": true
       }
     ]
   },

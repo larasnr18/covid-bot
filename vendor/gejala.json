@@ -1,0 +1,77 @@
+{
+  "type": "bubble",
+  "direction": "ltr",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "Secara umum ada 3 gejala umum yang bisa menandakan seseorang terinfeksi virus Corona, yaitu:",
+        "align": "start",
+        "wrap": true
+      },
+      {
+        "type": "box",
+        "layout": "baseline",
+        "margin": "lg",
+        "contents": [
+          {
+            "type": "icon",
+            "url": "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/cp0/93391885_699697644101956_5076552800142360576_n.jpg?_nc_cat=103&_nc_sid=e007fa&_nc_ohc=5i8WfH5G8pgAX8VnP3c&_nc_ht=scontent-sin6-2.xx&oh=7c36405f7e3c20f527f9a7d1d7f892a5&oe=5EBAAF01",
+            "size": "xxs"
+          },
+          {
+            "type": "text",
+            "text": "Demam (suhu tubuh di atas 38 derajat Celsius)",
+            "margin": "sm",
+            "wrap": true
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "baseline",
+        "contents": [
+          {
+            "type": "icon",
+            "url": "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/cp0/93391885_699697644101956_5076552800142360576_n.jpg?_nc_cat=103&_nc_sid=e007fa&_nc_ohc=5i8WfH5G8pgAX8VnP3c&_nc_ht=scontent-sin6-2.xx&oh=7c36405f7e3c20f527f9a7d1d7f892a5&oe=5EBAAF01",
+            "size": "xxs"
+          },
+          {
+            "type": "text",
+            "text": "Batuk",
+            "margin": "sm"
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "baseline",
+        "contents": [
+          {
+            "type": "icon",
+            "url": "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/cp0/93391885_699697644101956_5076552800142360576_n.jpg?_nc_cat=103&_nc_sid=e007fa&_nc_ohc=5i8WfH5G8pgAX8VnP3c&_nc_ht=scontent-sin6-2.xx&oh=7c36405f7e3c20f527f9a7d1d7f892a5&oe=5EBAAF01",
+            "size": "xxs"
+          },
+          {
+            "type": "text",
+            "text": "Sesak napas",
+            "margin": "sm"
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "Menurut penelitian, gejala COVID-19 muncul dalam waktu 2 hari sampai 2 minggu setelah terpapar virus Corona.",
+        "wrap": true
+      }
+    ]
+  }
+}
