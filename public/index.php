@@ -77,17 +77,36 @@ $data = json_decode($body, true);
                     // send same message as reply to user
                     
                     if($textMsg=='halo'||$textMsg=='hai'||$textMsg=='hi'||$textMsg=='tes'||$textMsg=='test'){
-                        $textMessageBuilder1 = new TextMessageBuilder("Halo! Perkenalkan aku Pico. Aku adalah Pusat Informasi Covid-19. Kamu bisa tanya-tanya mengenai info terkait Covid-19 ke aku. Semoga kamu sehat-sehat selalu ya.\n\nUntuk memulai obrolan, kamu bisa ketik 'Menu' atau klik menu di bawah ya.");
-                        $textMessageBuilder2 = new TextMessageBuilder("Bagikan info akurat tentang COVID-19 ke teman dan keluargamu 🙏\nUntuk info lebih lengkap kamu bisa kunjugi https://www.covid19.go.id\nHotline 119 untuk mendapatkan bantuan apabila ada gejala");
+                        // $textMessageBuilder1 = new TextMessageBuilder("Halo! Perkenalkan aku Pico. Aku adalah Pusat Informasi Covid-19. Kamu bisa tanya-tanya mengenai info terkait Covid-19 ke aku. Semoga kamu sehat-sehat selalu ya.\n\nUntuk memulai obrolan, kamu bisa ketik 'Tanya Pico' atau pilih menu di bawah ya.");
+                        // $textMessageBuilder2 = new TextMessageBuilder("Bagikan info akurat tentang COVID-19 ke teman dan keluargamu 🙏\nUntuk info lebih lengkap kamu bisa kunjugi https://www.covid19.go.id\nHotline 119 untuk mendapatkan bantuan apabila ada gejala");
 
-                        $stickerMessageBuilder = new StickerMessageBuilder(1, 106);
+                        // $stickerMessageBuilder = new StickerMessageBuilder(1, 106);
                         
-                        $multiMessageBuilder = new MultiMessageBuilder();
-                        $multiMessageBuilder->add($textMessageBuilder1);
-                        $multiMessageBuilder->add($textMessageBuilder2);
-                        $multiMessageBuilder->add($stickerMessageBuilder);
+                        // $multiMessageBuilder = new MultiMessageBuilder();
+                        // $multiMessageBuilder->add($textMessageBuilder1);
+                        // $multiMessageBuilder->add($textMessageBuilder2);
+                        // $multiMessageBuilder->add($stickerMessageBuilder);
                         
-                        $result = $bot->replyMessage($event['replyToken'], $multiMessageBuilder);
+                        // $result = $bot->replyMessage($event['replyToken'], $multiMessageBuilder);
+
+                        $greetingMsg = "Halo! Perkenalkan aku Pico. Aku adalah Pusat Informasi Covid-19. Kamu bisa tanya-tanya mengenai info terkait Covid-19 ke aku. Semoga kamu sehat-sehat selalu ya.\n\nUntuk memulai obrolan, kamu bisa ketik 'Tanya Pico' atau pilih menu di bawah ya.";
+
+                        $flexTemplate = file_get_contents("../vendor/greetings_card.json");
+                        $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
+                            'replyToken' => $event['replyToken'],
+                            'messages'   => [
+                                [
+                                    'type'     => 'text',
+                                    'text'  => $greetingMsg
+                                ],
+                                [
+                                    'type'     => 'flex',
+                                    'altText'  => 'Test Flex Message',
+                                    'contents' => json_decode($flexTemplate)
+                                ]
+
+                            ],
+                        ]);
                     }else if($textMsg=='tanya pico'){
                         $flexTemplate = file_get_contents("../vendor/menu.json");
                         $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
@@ -97,9 +116,6 @@ $data = json_decode($body, true);
                                     'type'     => 'flex',
                                     'altText'  => 'Test Flex Message',
                                     'contents' => json_decode($flexTemplate)
-                                ],[
-                                    'type'     => 'text',
-                                    'text'  => 'Test Flex Message'
                                 ]
 
                             ],
