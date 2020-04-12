@@ -469,6 +469,9 @@ $data = json_decode($body, true);
 
                             ],
                         ]);
+                    }else{
+                        $message="Maaf bisa diulangi?";
+                        $result = $bot->replyText($event['replyToken'], $message);
                     }
  
  
