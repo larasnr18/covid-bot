@@ -423,10 +423,6 @@ $data = json_decode($body, true);
                             'replyToken' => $event['replyToken'],
                             'messages'   => [
                                 [
-                                    'type'     => 'text',
-                                    'text'  => 'Situasi virus corona (COVID-19)'
-                                ],
-                                [
                                     'type'     => 'flex',
                                     'altText'  => 'Test Flex Message',
                                     'contents' => json_decode($flexTemplate)
@@ -439,10 +435,6 @@ $data = json_decode($body, true);
                         $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
                             'replyToken' => $event['replyToken'],
                             'messages'   => [
-                                [
-                                    'type'     => 'text',
-                                    'text'  => 'Situasi virus corona (COVID-19)'
-                                ],
                                 [
                                     'type'     => 'flex',
                                     'altText'  => 'Test Flex Message',
@@ -457,10 +449,6 @@ $data = json_decode($body, true);
                             'replyToken' => $event['replyToken'],
                             'messages'   => [
                                 [
-                                    'type'     => 'text',
-                                    'text'  => 'Situasi virus corona (COVID-19)'
-                                ],
-                                [
                                     'type'     => 'flex',
                                     'altText'  => 'Test Flex Message',
                                     'contents' => json_decode($flexTemplate)
@@ -473,10 +461,6 @@ $data = json_decode($body, true);
                         $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
                             'replyToken' => $event['replyToken'],
                             'messages'   => [
-                                [
-                                    'type'     => 'text',
-                                    'text'  => 'Situasi virus corona (COVID-19)'
-                                ],
                                 [
                                     'type'     => 'flex',
                                     'altText'  => 'Test Flex Message',

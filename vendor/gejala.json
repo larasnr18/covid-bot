@@ -60,16 +60,11 @@
             "margin": "sm"
           }
         ]
-      }
-    ]
-  },
-  "footer": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
+      },
       {
         "type": "text",
         "text": "Menurut penelitian, gejala COVID-19 muncul dalam waktu 2 hari sampai 2 minggu setelah terpapar virus Corona.",
+        "margin": "xl",
         "wrap": true
       }
     ]
