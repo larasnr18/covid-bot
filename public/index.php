@@ -122,7 +122,7 @@ $data = json_decode($body, true);
                         ]);
                     }else if($textMsg=='kabar covid-19 terkini di indonesia'){
 
-                        $url = "https://api.kawalcorona.com/indonesia/";
+                        $url = "https://lappybot-api.herokuapp.com/customers/";
 
                         $client = curl_init($url);
                         curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
@@ -130,11 +130,25 @@ $data = json_decode($body, true);
 
                         $result = json_decode($response);
 
-                        $natConfirmed = $result[0]->positif;
+                        $natConfirmed = $result[0]->email;
 
-                        $natDeaths = $result[0]->meninggal;
+                        $natDeaths = $result[0]->name;
 
-                        $natRecovered = $result[0]->sembuh;
+                        $natRecovered = $result[0]->active;
+
+                        // $url = "https://api.kawalcorona.com/indonesia/";
+
+                        // $client = curl_init($url);
+                        // curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
+                        // $response = curl_exec($client);
+
+                        // $result = json_decode($response);
+
+                        // $natConfirmed = $result[0]->positif;
+
+                        // $natDeaths = $result[0]->meninggal;
+
+                        // $natRecovered = $result[0]->sembuh;
 
                         $intConfirmed = getData("https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Confirmed%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true");
 
